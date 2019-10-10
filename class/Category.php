@@ -11,14 +11,16 @@ class Category{
 
         }
         else{
-             if(isset($file['image']['name'])){
 
-                $image_name         = mysqli_real_escape_string($db->link, $file['image']['name']);
-                $tmp_name           = $file['image']['tmp_name'];
-                $image_ext          = explode('.',$image_name)[1];
+             // check image upload or not 
+             if(isset($file['image']['name'])){
+              
+                $image_name         =  mysqli_real_escape_string($db->link, $file['image']['name']);
+                $tmp_name           =  $file['image']['tmp_name'];
+                $image_ext          =  explode('.',$image_name)[1];
                 $image_new_name     =  time().rand(4,10).".".$image_ext;
                 $filepath           =  "images/category/".$image_new_name;
-                $extension          = array('jpg','jpeg','gif','png');
+                $extension          =  array('jpg','jpeg','gif','png');
                  
                 // check if the extension has  in the array or not 
                 if(!in_array($image_ext,$extension)){
@@ -37,5 +39,11 @@ class Category{
                  }
              }
         }
+    }
+
+    public function total_categories(){
+        global $db;
+        return $category = $db->count("SELECT * FROM categories");
+
     }
 }

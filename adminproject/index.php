@@ -19,25 +19,33 @@
                           <div class="row">
                              <div class="col-md-3">
                                 <div class="desh-box">
-                                  <h2><i class="fas fa-user"></i> <span class="total_number">203</span></h2>
+                                  <h2><i class="fas fa-user"></i> <span class="total_number">
+                                    <?php  echo $user->total_user();  ?></span></h2>
                                   <h4>Users</h4>
                                 </div>
                              </div>
                              <div class="col-md-3">
                                 <div class="desh-box">
-                                  <h2><i class="fas fa-pencil-alt"></i><span class="total_number">203</span></h2>
+                                  <h2><i class="fas fa-pencil-alt"></i><span class="total_number">
+                                    <?php echo $brand->total_brands(); ?>
+                                  </span></h2>
                                   <h4>Brand</h4>
                                 </div>
                              </div>
                              <div class="col-md-3">
                                 <div class="desh-box">
-                                  <h2><i class="fas  fa-columns"></i> <span class="total_number">23</span></h2>
+                                  <h2><i class="fas  fa-columns"></i> <span class="total_number">
+                                  <?php echo $category->total_categories();  ?>
+                                    
+                                  </span></h2>
                                   <h4>Category</h4>
                                 </div>
                              </div>
                              <div class="col-md-3">
                                 <div class="desh-box">
-                                  <h2><i class="fas fa-signal"></i><span class="total_number">2,0003</span> </h2>
+                                  <h2><i class="fas fa-signal"></i><span class="total_number">
+                                    <?php echo $product->total_products(); ?></span> 
+                                  </h2>
                                   <h4>products</h4>
                                 </div>
                              </div>
@@ -60,26 +68,9 @@
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
-                                          <td>Noor alam</td>
-                                          <td>noor@gmail.com</td>
-                                          <td>Dec,17 2016</td>
-                                      </tr>
-                                      <tr>
-                                          <td>Jakir Khan</td>
-                                          <td>jakirkhan@gmail.com</td>
-                                          <td>Dec,17 2017</td>
-                                      </tr>
-                                      <tr>
-                                          <td>Atikul islam</td>
-                                          <td>Atikul@gmail.com</td>
-                                          <td>Dec,17 2016</td>
-                                      </tr>
-                                      <tr>
-                                          <td>Jahid</td>
-                                          <td>Jahid@gmail.com</td>
-                                          <td>Dec,17 2016</td>
-                                      </tr>
+                                     <?php 
+                                       echo $user->selectAllUser();
+                                     ?>
                                     </tbody> 
                                </table>
                           </div>

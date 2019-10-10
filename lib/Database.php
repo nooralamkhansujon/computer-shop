@@ -55,6 +55,11 @@ class  Database{
         }
     }
 
+    public function  count($sql){
+        $result  = $this->link->query($sql);
+        return  $result->num_rows;
+    } 
+
     // public function pagination($table,$buttons=5,$per_page_record=5){
      
     //     $pagination_buttns = 11;

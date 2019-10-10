@@ -172,4 +172,33 @@ class User{
 
    }
 
+   public function total_user(){
+        global $db;
+        $sql = "SELECT * FROM  users;";
+        $count = $db->count($sql);
+        return $count;
+
+   }
+
+   public function selectAllUser(){
+          global $db;
+          $sql = "SELECT * FROM users ORDER BY id DESC";
+          $result = $db->select($sql);
+           
+          $output = ''; 
+
+          while($row = $result->fetch_assoc()){
+               
+               $output .="
+                 <tr>
+                    <td>".$row['username']."</td>
+                    <td>".$row['email']."</td>
+                    <td>".date('Y, D M',strtotime($row['date']))."</td>
+                 </tr>";
+          }
+
+          return $output;
+
+   }
+
 }

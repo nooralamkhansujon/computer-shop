@@ -221,6 +221,12 @@ class Product{
 
     }
 
+    public function total_products(){
+        global $db;
+        return $products = $db->count("SELECT * FROM products");
+
+    }
+
 
 }
 

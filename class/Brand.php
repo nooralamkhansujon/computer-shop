@@ -2,8 +2,9 @@
 
 class Brand{
      
-
-    public function update($date,$file){
+    public function total_brands(){
+        global $db;
+        return $category = $db->count("SELECT * FROM brands");
 
     }
 }
