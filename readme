@@ -1,0 +1,1 @@
+SELECT * FROM `users` WHERE (email='nooralam@gmail.com' AND `password`= 'testing321') AND 'role'='1'

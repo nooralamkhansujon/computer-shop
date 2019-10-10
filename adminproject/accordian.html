@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <!-- ckeditor  -->
+    <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+   <!-- Custom styles for this template -->
+   <link href="main.css" rel="stylesheet">
+   <script src="all.js"></script>
+</head>
+<body>
+     
+
+    <div  id="accordian" role="tablist">
+              
+                     <div class="list-group" role="tab">
+                           
+                               <a class="list-group-item list_color_bg" data-toggle="collapse" href="#section-1">   <i class="fas fa-pencil-alt"></i> Posts</a>
+                           
+                            <div class="collapse" id="section-1" data-parent="#accordian">
+                                    <a class="list-group-item" href="">Add Post</a>
+                                    <a class="list-group-item" href="">
+                                        <i class="fas fa-edit"></i>
+                                        Edit Post
+                                    </a>
+                                    <a class="list-group-item" href="">
+                                    <i class="fas fa-trash-alt"></i>
+                                        Delete Post</a>
+                            </div>
+                     </div>
+                     <div class="list-group" role="tab">
+                           
+                            <a class="list-group-item list_color_bg" data-toggle="collapse" href="#section-2">
+                                <i class="fas  fa-user"></i>
+                                User</a>
+                        
+                         <div class="collapse" id="section-2" data-parent="#accordian">
+                                 <a class="list-group-item" href="">
+                                     <i class="fas fa-user-plus"></i>
+                                     Add User</a>
+                                 <a class="list-group-item" href="">
+                                    <i class="fas fa-user-edit"></i>Edit User</a>
+                                 <a class="list-group-item" href="">
+                                     <i class="fas fa-user-minus"></i>
+                                     Delete User</a>
+                         </div>
+                  </div>
+                  <div class="list-group" role="tab">
+                           
+                        <a class="list-group-item list_color_bg" data-toggle="collapse" href="#section-3"> 
+                            <i class="fas fa-columns"></i>
+                            Page</a>
+                    
+                     <div class="collapse" id="section-3" data-parent="#accordian">
+                             <a class="list-group-item" href="">Add Page</a>
+                             <a class="list-group-item" href="">
+                                 <i class="fas fa-edit"></i>Edit Page</a>
+                             <a class="list-group-item" href="">
+                                 <i class="fas fa-trash-alt"></i>
+                                 Delete Pages</a>
+                     </div>
+               </div>
+                    
+               
+
+    </div>
+    
+  
+
+
+   <script src="jquery-3.3.1.slim.min.js"></script>
+   <script src="popper.min.js"></script>
+   <script src="bootstrap.min.js"></script>
+</body>
+</html>
